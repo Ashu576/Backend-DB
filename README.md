@@ -23,19 +23,23 @@ NULL                |        created_by is Timestamp
 # To create this Database follow these cammands
 CREATE DATABASE hrportal;
 USE hrportal;
+
 CREATE TABLE employees (
-    employee_id INT PRIMARY KEY AUTO_INCREMENT,
+    employee_id VARCHAR(50) PRIMARY KEY,
     password VARCHAR(255) NOT NULL,
-    last_login TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    last_login TIMESTAMP NULL DEFAULT NULL
 );
+
 CREATE TABLE templates (
     id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(255) NOT NULL,
     content TEXT NOT NULL,
-    employee_id INT,
+    employee_id VARCHAR(50),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (employee_id) REFERENCES employees(employee_id)
 );
+
 SELECT * FROM employees;
 SELECT * FROM templates;
+
 
