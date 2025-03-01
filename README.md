@@ -25,21 +25,22 @@ CREATE DATABASE hrportal;
 USE hrportal;
 
 CREATE TABLE employees (
-    employee_id VARCHAR(50) PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL UNIQUE,
+    email_id VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
-    last_login TIMESTAMP NULL DEFAULT NULL
+    last_login TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE templates (
     id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(255) NOT NULL,
     content TEXT NOT NULL,
-    employee_id VARCHAR(50),
+    uploaded_by VARCHAR(100),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (employee_id) REFERENCES employees(employee_id)
+    FOREIGN KEY (uploaded_by) REFERENCES employees(name) ON DELETE SET NULL 
 );
 
 SELECT * FROM employees;
 SELECT * FROM templates;
-
 
