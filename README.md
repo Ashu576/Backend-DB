@@ -13,10 +13,10 @@ HR_PORTAL-Backend connection to Database
 - First you have to Register an employee
 - Login with the correct credentials is required for Authorization.
 - To create a new template:
-1. login with the correct Credentials a token will be generated.
-2. That token should be given as a input in Authorization variable in the HEADER Option of the POSTMAN.
-3. Then the input for creating template should be given (Title and Content).
-4. After that the name of the person who uploaded the template will be fetched from the token provided.
+  1. login with the correct Credentials a token will be generated.
+  2. That token should be given as a input in Authorization variable in the HEADER Option of the POSTMAN.
+  3. Then the input for creating template should be given (Title and Content).
+  4. After that the name of the person who uploaded the template will be fetched from the token provided.
 
 # The Database Creation
 - The created Database is named "hrportals".
