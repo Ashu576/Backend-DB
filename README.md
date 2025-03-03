@@ -37,7 +37,7 @@ NULL                |        created_at is Timestamp
    3.1 Employee table
 
     CREATE TABLE employees (
-      id INT PRIMARY KEY,
+      id INT PRIMARY KEY AUTO_INCREMENT,
       name VARCHAR(100) NOT NULL UNIQUE,
       email_id VARCHAR(255) NOT NULL UNIQUE,
       password VARCHAR(255) NOT NULL,
