@@ -8,6 +8,7 @@ HR_PORTAL-Backend connection to Database
   1. POST /api/employees/add → Register an employee
   2. POST /api/employees/login → Login & get a token
   3. POST /api/templates/create → Create a template (use token)
+  4. GET /api/templates/all → To Fetch all templates
 
 # To use the Token for Creating a Template (USE POSTMAN TO TEST THEM)
 - First you have to Register an employee
