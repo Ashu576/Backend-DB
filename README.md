@@ -55,7 +55,7 @@ NULL                |        created_at is Timestamp
       FOREIGN KEY (uploaded_by) REFERENCES employees(name) ON DELETE SET NULL 
     );
 ------------------------------
-4. To Run each table for viewing data stored in each of them
+4. To Run each table for viewing data stored in each of them using API
 ------------------------------
     SELECT * FROM employees;
 ------------------------------
