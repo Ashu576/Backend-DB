@@ -37,7 +37,7 @@ NULL                |        created_at is Timestamp
    3.1 Employee table
 
     CREATE TABLE employees (
-      id INT PRIMARY KEY AUTO_INCREMENT,
+      id INT PRIMARY KEY,
       name VARCHAR(100) NOT NULL UNIQUE,
       email_id VARCHAR(255) NOT NULL UNIQUE,
       password VARCHAR(255) NOT NULL,
@@ -50,9 +50,8 @@ NULL                |        created_at is Timestamp
       id INT PRIMARY KEY AUTO_INCREMENT,
       title VARCHAR(255) NOT NULL,
       content TEXT NOT NULL,
-      uploaded_by VARCHAR(100),
-      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-      FOREIGN KEY (uploaded_by) REFERENCES employees(name) ON DELETE SET NULL 
+      uploaded_by VARCHAR(100) NOT NULL, 
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
 ------------------------------
 4. To Run each table for viewing data stored in each of them using API
