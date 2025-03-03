@@ -5,9 +5,9 @@ HR_PORTAL-Backend connection to Database
 - The Backend code is pushed in the git respository.
 - The code is in node.js language with DB connections.
 - In this updated code only 3 API is required:
-  -POST /api/employees/add → Register an employee
-  -POST /api/employees/login → Login & get a token
-  -POST /api/templates/create → Create a template (use token)
+  1. POST /api/employees/add → Register an employee
+  2. POST /api/employees/login → Login & get a token
+  3. POST /api/templates/create → Create a template (use token)
 
 # To use the Token for Creating a Template (USE POSTMAN TO TEST THEM)
 - First you have to Register an employee
