@@ -21,17 +21,17 @@ HR_PORTAL-Backend connection to Database
 
 # The Database Creation
 - The created Database is named "hrportals".
-- It has 2 tables Employee and Templates.
+- It has 3 tables Employee and Templates.
 
-## Fields which were considered are:
+## Tables which were considered are:
 -------------------------------------------------------
-Employee fields     |        Template fields
+HR and Admin fields |        Template fields
 --------------------|----------------------------------
-Name                |        ID
-Email               |        Title
-Password            |        Content
-Last_login          |        uploaded_by as Foreign key (refering employee name)
-NULL                |        created_at is Timestamp
+First Name          |        ID
+Last Name           |        Title
+Email               |        COntent
+Password            |        Uploaded_by
+Last_login          |        Created_at      
 --------------------------------------------------------
 - These fields can be updated or changed according to the requirement of Main project.
 
@@ -48,17 +48,29 @@ NULL                |        created_at is Timestamp
 ------------------------------
 3. To create tables inside a Database with required fields:
 -------------------------------
-   3.1 Employee table
+   3.1 HR table
 
-    CREATE TABLE employees (
-      id INT PRIMARY KEY AUTO_INCREMENT,
-      name VARCHAR(100) NOT NULL UNIQUE,
-      email_id VARCHAR(255) NOT NULL UNIQUE,
-      password VARCHAR(255) NOT NULL,
-      last_login TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    CREATE TABLE hr (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email_id VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    last_login TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
 ------------------------------
-   3.2 Template table
+    3.2 Admin table
+
+    CREATE TABLE admin (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email_id VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    last_login TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    ); 
+------------------------------
+   3.3 Template table
 
     CREATE TABLE templates (
       id INT PRIMARY KEY AUTO_INCREMENT,
@@ -70,7 +82,9 @@ NULL                |        created_at is Timestamp
 ------------------------------
 4. To Run each table for viewing data stored in each of them using API
 ------------------------------
-    SELECT * FROM employees;
+    SELECT * FROM hr;
+------------------------------
+    SELECT * FROM admin;
 ------------------------------
     SELECT * FROM templates;
 ------------------------------
