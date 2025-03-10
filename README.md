@@ -29,7 +29,7 @@ HR and Admin fields |        Template fields
 --------------------|----------------------------------
 First Name          |        ID
 Last Name           |        Title
-Email               |        COntent
+Email               |        Content
 Password            |        Uploaded_by
 Last_login          |        Created_at      
 --------------------------------------------------------
